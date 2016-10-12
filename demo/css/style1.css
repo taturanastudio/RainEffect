@@ -6,6 +6,21 @@
 	font-style: normal;
 }
 
+header {
+	position: absolute;
+	z-index: 9999;
+	top: 10vh;
+	width: 100%;
+	text-align: center;
+	/*font-size: 4em;*/
+}
+
+header h1 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: rgba(60, 40, 120, 0.60);
+	font-size: 4em;
+}
+
 .icon {
 	font-family: 'icomoon';
 	speak: none;
@@ -87,7 +102,7 @@
 	-webkit-align-items: center;
 	align-items: center;
 	position: absolute;
-	bottom: 28vh;
+	bottom: 18vh;
 }
 
 .nav-item {
@@ -133,9 +148,10 @@
 }
 
 .slide__element--temp {
-	font-size: 8em;
+	font-size: 10em;
 	font-weight: 700;
 	margin: 0 0 0.1em;
+	color: rgba(60, 40, 120, 0.60);
 }
 
 .slide__element--temp small {

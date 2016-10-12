@@ -12,6 +12,7 @@
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/style1.css" />
 	<!--[if IE]>
@@ -33,23 +34,19 @@
 		<img src="img/weather/texture-drizzle-bg.png" />
 	</div>
 	<div class="container">
-		<header class="codrops-header">
-			<div class="codrops-links">
-				<a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/CardStackEffects/" title="Previous Demo"><span>Previous Demo</span></a>
-				<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=25417" title="Back to the article"><span>Back to the Codrops article</span></a>
-			</div>
-			<h1>Rain &amp; Water Effects</h1>
-			<nav class="codrops-demos">
+		<header>
+			<h1>RIO DE JANEIRO - RJ</h1>
+<!-- 			<nav class="codrops-demos">
 				<a class="current-demo" href="index.html">Weather</a>
 				<a href="index2.html">Water</a>
 				<a href="index3.html">Video</a>
-			</nav>
+			</nav> -->
 		</header>
 		<div class="slideshow">
 			<canvas width="1" height="1" id="container" style="position:absolute"></canvas>
 			<!-- Heavy Rain -->
 			<div class="slide" id="slide-1" data-weather="rain">
-				<div class="slide__element slide__element--date">Sunday, 24<sup>th</sup> of October 2043</div>
+				<div class="slide__element slide__element--date">Quarta-feira, 12 de Outubro de 2016</div>
 				<div class="slide__element slide__element--temp">12°<small>C</small></div>
 			</div>
 			<!-- Drizzle -->
@@ -83,7 +80,12 @@
 		<p class="nosupport">Sorry, but your browser does not support WebGL!</p>
 	</div>
 	<!-- /container -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.amd.min.js"></script>
+	<script id="template" type="text/x-handlebars-template">
+	  <header><h1>{{city}}</h1></header>
+	</script>
 	<script src="js/index.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 
 </html>
