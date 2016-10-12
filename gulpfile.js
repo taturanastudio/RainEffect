@@ -5,7 +5,8 @@ var gulp = require('gulp'),
   browserify = require('browserify'),
   uglify = require('gulp-uglify'),
   streamify = require('gulp-streamify'),
-  babelify = require("babelify");
+  babelify = require("babelify"),
+  concat = require('gulp-concat');
 
 function compileJS(file){
   browserify('src/'+file+'.js',{debug:true})

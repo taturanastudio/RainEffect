@@ -1,4 +1,43 @@
 
+/*
+  DATA WHEATER
+  rain
+  drizzle
+  sunny
+  storm
+  fallout
+
+  WHEATER ICONS
+  rainy
+  drizzle
+  sun
+  storm
+  radioactive
+
+*/
+
+var forecasts = {
+  city: 'São Paulo',
+  symbol: 'C',
+  forecasts: [
+    {
+      title:'adasdasd',
+      temperature: '23',
+      longDate: 'Quinta-feira 13 de Outubro de 2016',
+      shortDate: '13/10',
+      dataWheater: 'rain',
+      iconWheater: 'rainy'
+    },{
+      title:'qwerqwerqwer',
+      temperature: '25',
+      longDate: 'Sexta-feira 14 de Outubro de 2016',
+      shortDate: '14/10',
+      dataWheater: 'sunny',
+      iconWheater: 'sun'
+    }
+  ]
+}
+
 window.getQueryParams = function ( name, url ) {
   if (!url) url = location.href;
   name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
@@ -26,8 +65,9 @@ function changeSlide() {
 }
 
 function renderTemplate(container) {
-  el = document.querySelectorAll('.container');
-  el.innerHTML = "asdasd";
+  el = document.querySelectorAll('#main')[0];
+  template = Handlebars.compile(document.querySelectorAll('#template')[0].innerHTML);
+  el.innerHTML = template(forecasts);
 }
 
 window.ready = function (fn) {
