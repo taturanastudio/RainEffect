@@ -53,21 +53,25 @@ window.getParam = function (param) {
 
 function changeSlide() {
   (function slider(i) {
-    if(i <= 5){
+    if(i <= 7){
       location.hash = '#slide-' + i;
       window.setTimeout(function(){
         slider(++i);
-      }, 2000);
+      }, 5000);
     } else {
       return;
     }
-  })(1);
+  })(0);
 }
 
 function renderTemplate(container) {
   el = document.querySelectorAll('#main')[0];
   template = Handlebars.compile(document.querySelectorAll('#template')[0].innerHTML);
-  el.innerHTML = template(forecasts);
+  forecast = new Forecast();
+  forecast.update('/json/test.json').then(function() {
+    forecast.build();
+    el.innerHTML = template(forecast);
+  })
 }
 
 window.ready = function (fn) {
