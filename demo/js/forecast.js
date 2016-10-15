@@ -63,7 +63,7 @@ Forecast.prototype.build = function(data = null)
 	data['results']['forecast'].forEach(function(item, index){
 		if (index > 7 ) return;
 		year = new Date().getFullYear();
-		month = item['date'].split('/')[1];
+		month = item['date'].split('/')[1] - 1;
 		day = item['date'].split('/')[0];
 		date = new Date(year, month, day);
 		forecast.forecasts[index] = {

@@ -57,7 +57,7 @@ function changeSlide() {
       location.hash = '#slide-' + i;
       window.setTimeout(function(){
         slider(++i);
-      }, 5000);
+      }, 15000);
     } else {
       return;
     }
@@ -68,7 +68,8 @@ function renderTemplate(container) {
   el = document.querySelectorAll('#main')[0];
   template = Handlebars.compile(document.querySelectorAll('#template')[0].innerHTML);
   forecast = new Forecast();
-  forecast.update('/json/test.json').then(function() {
+  forecast.update('/json/' + window.getQueryParams('city') + '.json').then(function() {
+  //forecast.update('/json/test.json').then(function() {
     forecast.build();
     el.innerHTML = template(forecast);
   })
